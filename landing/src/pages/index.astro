@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/Navbar.astro'
+import Hero from '../components/Hero.astro'
+import Features from '../components/Features.astro'
+import Diferenciais from '../components/Diferenciais.astro'
+import CTA from '../components/CTA.astro'
+import Footer from '../components/Footer.astro'
+---
+
+<Layout title="CondoCombat — O ERP da Fofoca">
+  <Navbar />
+
+  <main>
+    <Hero />
+
+    <Features />
+
+    <Diferenciais />
+
+    <section id="contato" class="bg-white px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl text-center">
+        <h2 class="text-3xl font-bold text-slate-900">Contato</h2>
+        <p class="mt-4 text-slate-500">Em breve — seu síndico vai ouvir sobre nós.</p>
+      </div>
+    </section>
+
+    <CTA />
+  </main>
+
+  <Footer />
+</Layout>

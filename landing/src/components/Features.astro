@@ -1,0 +1,57 @@
+---
+import FeatureCard from './FeatureCard.astro'
+
+const features = [
+  {
+    icon: '🔥',
+    title: 'Painel de Fofocas',
+    description: 'Feed em tempo real das ocorrências do condomínio',
+  },
+  {
+    icon: '⚔️',
+    title: 'Mapa de Rivalidades',
+    description: 'Visualize as tretas entre apartamentos em um grafo interativo',
+  },
+  {
+    icon: '📊',
+    title: 'Métricas do Caos',
+    description: 'Estatísticas de barulho, brigas e reclamações por andar',
+  },
+  {
+    icon: '🕵️',
+    title: 'Modo Fofoqueiro',
+    description: 'Acompanhe tudo sem ninguém saber',
+  },
+  {
+    icon: '🏆',
+    title: 'Ranking da Bagunça',
+    description: 'Saiba qual bloco é o mais problemático',
+  },
+  {
+    icon: '🔔',
+    title: 'Alertas de Treta',
+    description: 'Notificações quando a situação esquenta no seu andar',
+  },
+]
+---
+
+<section id="recursos" class="bg-white py-20">
+  <div class="mx-auto max-w-6xl px-4">
+    <h2 class="text-center text-3xl font-bold text-slate-900">
+      Funcionalidades que vão além do regulamento
+    </h2>
+    <p class="mt-2 text-center text-slate-500">
+      Do fuxico ao caos, tudo o que você precisa para gerenciar (ou inflamar) a vida em condomínio
+    </p>
+
+    <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {features.map((feature) => (
+        <FeatureCard
+          icon={feature.icon}
+          title={feature.title}
+          description={feature.description}
+        />
+      ))}
+    </div>
+  </div>
+</section>

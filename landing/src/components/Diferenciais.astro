@@ -1,0 +1,62 @@
+---
+const diferenciais = [
+  {
+    icon: '🎯',
+    title: 'Zero Burocracia',
+    description:
+      'Chega de atas intermináveis. Nossa plataforma transforma fofoca em dado estruturado.',
+  },
+  {
+    icon: '⚡',
+    title: 'Tempo Real',
+    description:
+      'Ocorrências aparecem ao vivo. Você sabe da treta antes do elevador.',
+  },
+  {
+    icon: '🤝',
+    title: 'Síndico Herói',
+    description:
+      'Ferramentas para o síndico agir antes que a briga vire caso de polícia.',
+  },
+]
+
+const stats = [
+  { number: '2.847', label: 'Fofocas Registradas' },
+  { number: '156', label: 'Síndicos Ativos' },
+  { number: '42', label: 'Condomínios' },
+  { number: '98%', label: 'Satisfação' },
+]
+---
+
+<section id="diferenciais" class="bg-slate-900 px-4 py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-6xl px-4 text-center">
+    <h2 class="text-3xl font-bold text-white">Por que o CondoCombat?</h2>
+    <p class="mt-2 text-slate-400">
+      Três razões para transformar o caos do seu condomínio em dados
+      acionáveis.
+    </p>
+
+    <div class="mt-12 grid gap-8 md:grid-cols-3">
+      {diferenciais.map((item) => (
+        <div class="rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur transition hover:bg-white/10">
+          <div class="text-5xl" aria-hidden="true">{item.icon}</div>
+          <h3 class="mt-4 text-xl font-semibold text-white">{item.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-300">
+            {item.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+    <div
+      class="mt-16 flex flex-wrap items-center justify-center gap-8 sm:gap-12"
+    >
+      {stats.map((stat) => (
+        <div class="text-center">
+          <div class="text-3xl font-bold text-rose-400">{stat.number}</div>
+          <div class="mt-1 text-sm text-slate-400">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
