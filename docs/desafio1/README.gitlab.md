@@ -119,10 +119,9 @@ Vá em **Settings → CI/CD → Variables** e adicione:
 
 **Como gerar `NETLIFY_AUTH_TOKEN`:**
 1. Acesse [app.netlify.com](https://app.netlify.com)
-2. User Settings (foto canto superior) → Applications
-3. Personal access tokens → New access token
-4. Nome: `ci-cd-condocombat` → copie o token
-5. Adicione como variável `NETLIFY_AUTH_TOKEN` (marque **Masked**)
+2. Clica na foto de perfil no canto superior direito → User Settings → Applications → Personal access tokens → New access token
+3. Nome: `ci-cd-condocombat` → copie o token
+4. Adicione como variável `NETLIFY_AUTH_TOKEN` (marque **Masked**)
 
 ---
 
