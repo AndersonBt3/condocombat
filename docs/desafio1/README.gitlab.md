@@ -113,7 +113,7 @@ Vá em **Settings → CI/CD → Variables** e adicione:
 
 | Variável | Descrição | Onde conseguir | Masked |
 |----------|-----------|----------------|--------|
-| `NETLIFY_AUTH_TOKEN` | Token de autenticação da Netlify | Netlify → User Settings → Applications → Personal access tokens | ✅ Sim |
+| `NETLIFY_AUTH_TOKEN` | Token de autenticação da Netlify | Netlify → Clica na foto de perfil no canto superior direito → User Settings → Applications → Personal access tokens → New access token | ✅ Sim |
 | `NETLIFY_SITE_ID` | ID do site na Netlify (UUID) | Netlify → Project configuration → General → Project ID | ✅ Sim |
 | `NETLIFY_SITE_NAME` | Nome do site (slug) | Netlify → Project configuration → General → Project name | ❌ Não |
 
@@ -123,14 +123,6 @@ Vá em **Settings → CI/CD → Variables** e adicione:
 3. Personal access tokens → New access token
 4. Nome: `ci-cd-condocombat` → copie o token
 5. Adicione como variável `NETLIFY_AUTH_TOKEN` (marque **Masked**)
-
-**Como obter `NETLIFY_SITE_ID`:**
-1. No Netlify, selecione o site no dashboard
-2. Vá em **Site configuration** → **General**
-3. Copie o **Site ID** (ex: `12345678-9abc-def0-1234-56789abcdef0`)
-4. Adicione como variável `NETLIFY_SITE_ID` (marque **Masked**)
-
-> 💡 Pode criar o site manualmente pelo dashboard ou via CLI: `netlify sites:create`
 
 ---
 

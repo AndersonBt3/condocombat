@@ -115,7 +115,7 @@ Vá em **Settings → Secrets and variables → Actions** e adicione:
 
 | Secret | Onde conseguir |
 |--------|----------------|
-| `NETLIFY_AUTH_TOKEN` | Netlify → User Settings → Applications → Personal access tokens → New access token |
+| `NETLIFY_AUTH_TOKEN` | Netlify → Clica na foto de perfil no canto superior direito → User Settings → Applications → Personal access tokens → New access token |
 | `NETLIFY_SITE_ID` | Netlify → Project configuration → General → Project ID (UUID) |
 | `NETLIFY_SITE_NAME` | Netlify → Project configuration → General → Project name (slug) |
 
@@ -125,14 +125,6 @@ Vá em **Settings → Secrets and variables → Actions** e adicione:
 3. Personal access tokens → New access token
 4. Nome: `ci-cd-condocombat` → copie o token
 5. Adicione como secret `NETLIFY_AUTH_TOKEN`
-
-**Como obter `NETLIFY_SITE_ID`:**
-1. No Netlify, selecione o site no dashboard
-2. Vá em **Site configuration** → **General**
-3. Copie o **Site ID** (ex: `12345678-9abc-def0-1234-56789abcdef0`)
-4. Adicione como secret `NETLIFY_SITE_ID`
-
-> 💡 Pode criar o site manualmente pelo dashboard ou via CLI: `netlify sites:create`
 
 ---
 
