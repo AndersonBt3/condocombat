@@ -55,7 +55,20 @@ npm run preview
 
 ---
 
-### Passo 2 — Criar Site na Netlify
+### Passo 2 — Fork e Clone do Repositório
+
+Antes de começar a configuração do deploy, você precisa ter o projeto em sua conta e na sua máquina local:
+
+1. Faça o **fork** do repositório: [https://github.com/avanti-dvp/condocombat](https://github.com/avanti-dvp/condocombat)
+2. Clone o **seu fork** para a sua máquina local:
+   ```bash
+   git clone https://github.com/SEU_USUARIO/condocombat.git
+   cd condocombat
+   ```
+
+---
+
+### Passo 3 — Criar Site na Netlify
 
 Antes de configurar a pipeline, é necessário ter um site criado na Netlify. Existem duas formas:
 
@@ -87,7 +100,7 @@ netlify sites:create --name condocombat-landing-seuApelido
 
 ---
 
-### Passo 3 — Criar arquivo `netlify.toml`
+### Passo 4 — Criar arquivo `netlify.toml`
 
 Crie `landing/netlify.toml` na raiz da landing page:
 
@@ -109,7 +122,7 @@ Crie `landing/netlify.toml` na raiz da landing page:
 
 ---
 
-### Passo 4 — Configurar Secrets no GitHub
+### Passo 5 — Configurar Secrets no GitHub
 
 Vá em **Settings → Secrets and variables → Actions** e adicione:
 
@@ -128,7 +141,7 @@ Vá em **Settings → Secrets and variables → Actions** e adicione:
 
 ---
 
-### Passo 5 — Criar Workflow GitHub Actions
+### Passo 6 — Criar Workflow GitHub Actions
 
 Crie o diretório `.github/workflows/` na **raiz do repositório** (não dentro de `landing/`) e adicione `deploy-landing.yml`:
 
@@ -231,7 +244,7 @@ Isso evita rodar a pipeline quando outras partes do monorepo (backend, frontend)
 
 ---
 
-### Passo 6 (Opcional) — Validar Localmente Antes de Subir
+### Passo 7 (Opcional) — Validar Localmente Antes de Subir
 
 ```bash
 # 1. Testes
@@ -253,7 +266,7 @@ act --job ci --container-architecture linux/amd64
 
 ---
 
-### Passo 7 — Commit e Push
+### Passo 8 — Commit e Push
 
 ```bash
 git add .
@@ -265,7 +278,7 @@ A pipeline será disparada automaticamente. Acompanhe em **Actions** no GitHub.
 
 ---
 
-### Passo 8 — Verificar Deploy
+### Passo 9 — Verificar Deploy
 
 Após a pipeline concluir:
 1. Acesse a URL do site: `https://{site-name}.netlify.app`

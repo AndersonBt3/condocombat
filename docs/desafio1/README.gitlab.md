@@ -53,7 +53,20 @@ npm run preview
 
 ---
 
-### Passo 2 — Criar Site na Netlify
+### Passo 2 — Fork e Clone do Repositório
+
+Antes de começar a configuração do deploy, você precisa ter o projeto em sua conta e na sua máquina local:
+
+1. Faça o **fork** do repositório: [https://gitlab.com/avanti-dvp/condocombat](https://gitlab.com/avanti-dvp/condocombat)
+2. Clone o **seu fork** para a sua máquina local:
+   ```bash
+   git clone https://gitlab.com/SEU_USUARIO/condocombat.git
+   cd condocombat
+   ```
+
+---
+
+### Passo 3 — Criar Site na Netlify
 
 Antes de configurar a pipeline, é necessário ter um site criado na Netlify. Existem duas formas:
 
@@ -85,7 +98,7 @@ netlify sites:create --name condocombat-landing-seuApelido
 
 ---
 
-### Passo 3 — Criar arquivo `netlify.toml`
+### Passo 4 — Criar arquivo `netlify.toml`
 
 Crie `landing/netlify.toml` na raiz da landing page:
 
@@ -107,7 +120,7 @@ Crie `landing/netlify.toml` na raiz da landing page:
 
 ---
 
-### Passo 4 — Configurar Variáveis no GitLab
+### Passo 5 — Configurar Variáveis no GitLab
 
 Vá em **Settings → CI/CD → Variables** e adicione:
 
@@ -126,7 +139,7 @@ Vá em **Settings → CI/CD → Variables** e adicione:
 
 ---
 
-### Passo 5 — Criar Pipeline `.gitlab-ci.yml`
+### Passo 6 — Criar Pipeline `.gitlab-ci.yml`
 
 Crie o arquivo `.gitlab-ci.yml` na **raiz do repositório**:
 
@@ -205,7 +218,7 @@ O `needs` garante a ordem: **test → build → deploy**.
 
 ---
 
-### Passo 6 (Opcional) — Validar Localmente Antes de Subir
+### Passo 7 (Opcional) — Validar Localmente Antes de Subir
 
 ```bash
 # 1. Testes
@@ -223,7 +236,7 @@ netlify deploy --dir=dist --prod --auth=$NETLIFY_AUTH_TOKEN --site=$NETLIFY_SITE
 
 ---
 
-### Passo 7 — Commit e Push
+### Passo 8 — Commit e Push
 
 ```bash
 git add .
@@ -235,7 +248,7 @@ A pipeline será disparada automaticamente. Acompanhe em **CI/CD → Pipelines**
 
 ---
 
-### Passo 8 — Verificar Deploy
+### Passo 9 — Verificar Deploy
 
 Após a pipeline concluir:
 1. Acesse a URL do site: `https://{site-name}.netlify.app`
